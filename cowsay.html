@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+
+        <title>gipetto/cowsay - Packagist</title>
+        <meta name="description" content="An extensible PHP port of the Cowsay linux utility" />
+        <meta name="author" content="Jordi Boggiano" />
+            <link rel="canonical" href="https://packagist.org/packages/gipetto/cowsay" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="shortcut icon" href="/favicon.ico?v=1679429467" />
+
+        <link rel="stylesheet" href="/build/app.css?v=1679429467" />
+        
+            <link rel="alternate" type="application/rss+xml" title="New Releases - gipetto/cowsay" href="https://packagist.org/feeds/package.gipetto/cowsay.rss" />
+    <link rel="alternate" type="application/rss+xml" title="New Releases - gipetto" href="https://packagist.org/feeds/vendor.gipetto.rss" />
+            <link rel="alternate" type="application/rss+xml" title="Newly Submitted Packages - Packagist" href="https://packagist.org/feeds/packages.rss" />
+        <link rel="alternate" type="application/rss+xml" title="New Releases - Packagist" href="https://packagist.org/feeds/releases.rss" />
+        
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/search.osd?v=1679429467" title="Packagist" />
+
+        
+            <link rel="stylesheet" href="/css/github/markdown.css?v=1679429467">
+        </head>
+
+    <body>
+    <section class="wrap">
+        <header class="navbar-wrapper navbar-fixed-top">
+            <nav class="container">
+                <div class="navbar" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <h1 class="navbar-brand"><a href="/">Packagist</a> <em class="hidden-sm hidden-xs">The PHP Package Repository</em></h1>
+                    </div>
+
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="/explore/">Browse</a>
+                            </li>
+                            <li>
+                                <a href="/packages/submit">Submit</a>
+                            </li>                            <li>
+                                <a href="/register/">Create account</a>
+                            </li>
+                            <li class="nav-user">
+                                <section class="nav-user-signin">
+                                    <a href="/login/">Sign in</a>
+
+                                    <section class="signin-box">
+                                        <form action="/login/" method="POST" id="nav_login">
+                                            <div class="input-group">
+                                                <input class="form-control" type="text" id="_username" name="_username" placeholder="Username / Email">
+                                                <span class="input-group-addon"><span class="icon-user"></span></span>
+                                            </div>
+                                            <div class="input-group">
+                                                <input class="form-control" type="password" id="_password" name="_password" placeholder="Password">
+                                                <span class="input-group-addon"><span class="icon-lock"></span></span>
+                                            </div>
+
+                                            <div class="checkbox">
+                                                <label for="_remember_me">
+                                                    <input type="checkbox" id="_remember_me" name="_remember_me" value="on" checked="checked" /> Remember me
+                                                </label>
+                                            </div>
+                                            <div class="signin-box-buttons">
+                                                <a href="/login/github" class="pull-right btn btn-primary btn-github"><span class="icon-github"></span>Use Github</a>
+                                                <button type="submit" class="btn btn-success" id="_submit_mini" name="_submit">Log in</button>
+                                            </div>
+                                        </form>
+
+                                        <div class="signin-box-register">
+                                            <a href="/register/">No account yet? Create one now!</a>
+                                        </div>
+                                    </section>
+                                </section>
+                            </li>                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section class="wrapper wrapper-search">
+    <div class="container ">
+        <form name="search_query" method="get" action="/search/" id="search-form" autocomplete="off">
+            <div class="sortable row">
+                <div class="col-xs-12 js-search-field-wrapper col-md-9">
+                                                            <input type="search" id="search_query_query" name="query" required="required" autocomplete="off" placeholder="Search packages..." tabindex="1" class=" form-control" value="" />
+                </div>
+            </div>
+        </form>    </div>
+</section>
+
+
+                
+        
+        <section class="wrapper">
+            <section class="container content" role="main">
+                                    <div id="search-container" class="hidden">
+                        <div class="row">
+                            <div class="search-list col-md-9"></div>
+
+                            <div class="search-facets col-md-3">
+                                <div class="search-facets-active-filters"></div>
+                                <div class="search-facets-type"></div>
+                                <div class="search-facets-tags"></div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div id="powered-by">
+                                    Search by <a href="https://www.algolia.com/"><img src="/img/algolia-logo-light.svg?v=1679429467"></a>
+                                </div>
+                                <div id="pagination-container">
+                                    <div class="pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="row" id="view-package-page">
+        <div class="col-xs-12 package">
+            <div class="package-header">
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <h2 class="title">
+                                                        <a href="/packages/gipetto/">gipetto<span class="hidden"> </span>/</a><span class="hidden"> </span>cowsay
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <p class="requireme"><i class="glyphicon glyphicon-save"></i> <input type="text" readonly="readonly" value="composer require gipetto/cowsay" /></p>
+
+                    
+                                        
+                    
+                    <p class="description">An extensible PHP port of the Cowsay linux utility</p>
+
+                                    </div>
+
+                <div class="col-md-offset-1 col-md-3">
+                    <div class="row package-aside">
+                        <div class="details col-xs-12 col-sm-6 col-md-12">
+                            <h5>Maintainers</h5>
+                            <p class="maintainers">
+                                <a href="/users/Gipetto/"><img width="48" height="48" title="Gipetto" src="https://www.gravatar.com/avatar/5169643ca8b2879e9663585316c0a290?s=48&amp;d=identicon" srcset="https://www.gravatar.com/avatar/5169643ca8b2879e9663585316c0a290?s=96&amp;d=identicon 2x"></a>
+                                                                                            </p>
+
+                            <h5>Details</h5>
+                                                        <p class="canonical">
+                                <a href="https://github.com/Gipetto/CowSay" title="Canonical Repository URL">github.com/Gipetto/CowSay</a>
+                            </p>
+
+                                                            <p><a rel="nofollow noopener external noindex ugc" href="http://github.com/Gipetto/CowSay">Homepage</a></p>
+                                                                                        <p><a rel="nofollow noopener external noindex ugc" href="https://github.com/Gipetto/CowSay/tree/master">Source</a></p>
+                                                                                        <p><a rel="nofollow noopener external noindex ugc" href="https://github.com/Gipetto/CowSay/issues">Issues</a></p>
+                                                                                                                                                                                                                            </div>
+
+                        
+                        <div class="facts col-xs-12 col-sm-6 col-md-12">
+                            <p>
+                                <span>
+                                    <a href="/packages/gipetto/cowsay/stats" rel="nofollow">Installs</a>:
+                                </span>
+                                5&#8201;328                            </p>
+                                                            <p>
+                                    <span>
+                                        <a href="/packages/gipetto/cowsay/dependents?order_by=downloads" rel="nofollow">Dependents</a>:
+                                    </span>
+                                    0
+                                </p>
+                                                                                        <p>
+                                    <span>
+                                        <a href="/packages/gipetto/cowsay/suggesters" rel="nofollow">Suggesters</a>:
+                                    </span>
+                                    0
+                                </p>
+                                                                                        <p>
+                                    <span>
+                                        <a href="/packages/gipetto/cowsay/advisories" rel="nofollow">Security</a>:
+                                    </span>
+                                    0
+                                </p>
+                                                                                        <p>
+                                    <span>
+                                        <a href="https://github.com/Gipetto/CowSay/stargazers">Stars</a>:
+                                    </span>
+                                    9
+                                </p>
+                                                                                        <p>
+                                    <span>
+                                        <a href="https://github.com/Gipetto/CowSay/watchers">Watchers</a>:
+                                    </span> 2
+                                </p>
+                                                                                        <p>
+                                    <span>
+                                        <a href="https://github.com/Gipetto/CowSay/network">Forks</a>:
+                                    </span>
+                                    2
+                                </p>
+                                                                                        <p>
+                                    <span>
+                                        <a rel="nofollow noopener external noindex ugc" href="https://github.com/Gipetto/CowSay/issues">Open Issues</a>:
+                                    </span>
+                                    0
+                                </p>
+                                                                                                            </div>
+                    </div>
+                </div>
+            </div>
+
+            
+                            <div class="row versions-section">
+                    <div class="version-details col-md-9">
+                                                    <div class="title">
+    <span class="version-number">1.1.0</span>
+
+    <span class="release-date">2020-05-16 21:15 UTC</span>
+</div>
+
+<div class="clearfix package-links">
+            <div class="row">
+                            <div class="clearfix visible-sm-block"></div>                <div class="clearfix visible-md-block visible-lg-block"></div>                <div class="requires col-sm-6 col-md-4 ">
+                    <p class="link-type">Requires</p>
+                                            <ul><li>php: &gt;=7.2.0</li></ul>
+                                    </div>
+                                                            <div class="devRequires col-sm-6 col-md-4 ">
+                    <p class="link-type">Requires (Dev)</p>
+                                            <ul><li><a href="/packages/phpunit/phpunit">phpunit/phpunit</a>: ~8.5.0</li></ul>
+                                    </div>
+                            <div class="clearfix visible-sm-block"></div>                                <div class="suggests col-sm-6 col-md-4 hidden-xs">
+                    <p class="link-type">Suggests</p>
+                                            <p class="no-links">None</p>
+                                    </div>
+                                            <div class="clearfix visible-md-block visible-lg-block"></div>                <div class="provides col-sm-6 col-md-4 hidden-xs">
+                    <p class="link-type">Provides</p>
+                                            <p class="no-links">None</p>
+                                    </div>
+                            <div class="clearfix visible-sm-block"></div>                                <div class="conflicts col-sm-6 col-md-4 hidden-xs">
+                    <p class="link-type">Conflicts</p>
+                                            <p class="no-links">None</p>
+                                    </div>
+                                                            <div class="replaces col-sm-6 col-md-4 hidden-xs">
+                    <p class="link-type">Replaces</p>
+                                            <p class="no-links">None</p>
+                                    </div>
+                    </div>
+    </div>
+
+<div class="metadata">
+    <p class="license"><i class="glyphicon glyphicon-copyright-mark" title="License"></i> MIT <span class="source-reference"><i class="glyphicon glyphicon-bookmark" title="Source Reference"></i> 85218ee4c0d18cc8753e08af54a8740aac12860a</span></p>
+
+            <i class="glyphicon glyphicon-user" title="Authors"></i>
+        <ul class="authors">
+                            <li>Shawn Parker                        <span class="visible-sm-inline visible-md-inline visible-lg-inline">&lt;shawn<span style="display:none">.woop</span>@topfroggraphics.com&gt;</span></li>
+                    </ul>
+    
+            <p class="tags">
+            <i class="glyphicon glyphicon-tag" title="Tags"></i>
+            <a href="https://packagist.org/search/?tags=cowsay">cowsay</a><a href="https://packagist.org/search/?tags=cows">cows</a><a href="https://packagist.org/search/?tags=cow">cow</a></p>
+    </div>
+                                            </div>
+                    <div class="col-md-3 no-padding">
+                        <div class="package-aside versions-wrapper">
+    <ul class="versions">
+                                <li class="details-toggler version" data-version-id="dev-master" data-load-more="/versions/4264665.json">
+                <a href="#dev-master" class="version-number">dev-master</a>
+
+                
+                            </li>
+                                <li class="details-toggler version open" data-version-id="1.1.0" data-load-more="/versions/3871309.json">
+                <a href="#1.1.0" class="version-number">1.1.0</a>
+
+                
+                            </li>
+                                <li class="details-toggler version" data-version-id="1.0.4" data-load-more="/versions/598516.json">
+                <a href="#1.0.4" class="version-number">1.0.4</a>
+
+                
+                            </li>
+                                <li class="details-toggler version" data-version-id="1.0.3" data-load-more="/versions/540726.json">
+                <a href="#1.0.3" class="version-number">1.0.3</a>
+
+                
+                            </li>
+                                <li class="details-toggler version" data-version-id="1.0.2" data-load-more="/versions/405836.json">
+                <a href="#1.0.2" class="version-number">1.0.2</a>
+
+                
+                            </li>
+                                <li class="details-toggler version" data-version-id="1.0.1" data-load-more="/versions/405829.json">
+                <a href="#1.0.1" class="version-number">1.0.1</a>
+
+                
+                            </li>
+                                <li class="details-toggler version last" data-version-id="1.0" data-load-more="/versions/405832.json">
+                <a href="#1.0" class="version-number">1.0</a>
+
+                
+                            </li>
+            </ul>
+    <div class="hidden versions-expander">
+        <i class="glyphicon glyphicon-chevron-down"></i>
+    </div>
+</div>
+
+    <div class="last-update">
+                    <p class="auto-update-success">This package is auto-updated.</p>
+                <p>Last update: 2023-03-23 08:40:01 UTC </p>
+            </div>
+                    </div>
+                </div>
+            
+                            <hr class="clearfix">
+                <div class="readme markdown-body">
+                    <h1>README</h1>
+                    
+<p><a href="https://github.com/Gipetto/CowSay/blob/HEAD//Gipetto/CowSay/releases" rel="nofollow noindex noopener external ugc"><img src="https://camo.githubusercontent.com/7d25d654ff9dd3384c95ec5e2b6cad52f26c223a6fa8f36bdfc8ea6514c64249/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f72656c656173652f4769706574746f2f436f775361792e737667" alt="Release Version"></a>
+<a href="https://packagist.org/packages/gipetto/cowsay" rel="nofollow noindex noopener external ugc"><img src="https://camo.githubusercontent.com/ca405f9f44d41ea76b217afc64609cb3f99fbefd8bdf34e0b57c4408c25f9df7/68747470733a2f2f696d672e736869656c64732e696f2f7061636b61676973742f762f4769706574746f2f436f775361792e737667" alt="Packagist Version"></a>
+<a href="https://github.com/Gipetto/CowSay/actions/workflows/main.yml" rel="nofollow noindex noopener external ugc"><img src="https://github.com/Gipetto/CowSay/actions/workflows/main.yml/badge.svg" alt="Build Status"></a>
+<a target="_blank" href="https://camo.githubusercontent.com/3fc5474803deaf8014e4b6708b069cb8019f57ade627fc88457fab069d35c55f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d6f6f2d436f772d6f72616e67652e737667" rel="nofollow noindex noopener external ugc"><img src="https://camo.githubusercontent.com/3fc5474803deaf8014e4b6708b069cb8019f57ade627fc88457fab069d35c55f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d6f6f2d436f772d6f72616e67652e737667" alt="Moo, Cow"></a></p>
+<p>An extensible PHP port of the <a href="http://en.wikipedia.org/wiki/Cowsay" rel="nofollow noindex noopener external ugc">Linux Cowsay</a> utility.</p>
+<h2><a id="user-content-requirements" class="anchor" href="#user-content-requirements" rel="nofollow noindex noopener external ugc"></a>Requirements</h2>
+<ul>
+<li>PHP 7.2+</li>
+</ul>
+<h2><a id="user-content-install" class="anchor" href="#user-content-install" rel="nofollow noindex noopener external ugc"></a>Install</h2>
+<pre class="notranslate"><code>$ composer require Gipetto/CowSay
+</code></pre>
+<h2><a id="user-content-quickstart" class="anchor" href="#user-content-quickstart" rel="nofollow noindex noopener external ugc"></a>Quickstart</h2>
+<pre><span class="pl-k">use</span> <span class="pl-v">CowSay</span>\<span class="pl-v">Cow</span>;
+
+<span class="pl-s1"><span class="pl-c1">$</span>bessie</span> = <span class="pl-k">new</span> <span class="pl-v">Cow</span>(<span class="pl-s">'Hello, Farm!'</span>);
+
+<span class="pl-c">// store the output in a variable</span>
+<span class="pl-s1"><span class="pl-c1">$</span>output</span> = <span class="pl-s1"><span class="pl-c1">$</span>bessie</span>-&gt;<span class="pl-en">say</span>();
+<span class="pl-k">echo</span> <span class="pl-s1"><span class="pl-c1">$</span>output</span>;
+
+<span class="pl-c">// or just echo the object for direct output</span>
+<span class="pl-k">echo</span> <span class="pl-s1"><span class="pl-c1">$</span>bessie</span>;</pre>
+<p>Displays:</p>
+<pre class="notranslate"><code>  ------------
+&lt; Hello, Farm! &gt;
+  ------------
+          \   ^__^
+           \  (oo)\_______
+              (__)\       )\/\
+                  ||----w |
+                  ||     ||
+</code></pre>
+<p>Run <code>php demo.php</code> to see all the included cows and their traits.</p>
+<h2><a id="user-content-traits" class="anchor" href="#user-content-traits" rel="nofollow noindex noopener external ugc"></a>Traits</h2>
+<p>Cows support a few traits. You can specify the Eyes, Tongue, Udder and, yes, you can specify Poop.</p>
+<pre><span class="pl-s1"><span class="pl-c1">$</span>bessie</span> = <span class="pl-k">new</span> <span class="pl-v">Cow</span>(<span class="pl-s">'Hello, Farm!'</span>);
+<span class="pl-s1"><span class="pl-c1">$</span>bessie</span>-&gt;<span class="pl-en">setEyes</span>(<span class="pl-s">'oO'</span>)
+    -&gt;<span class="pl-en">setTongue</span>(<span class="pl-s">'U'</span>)
+    -&gt;<span class="pl-en">setPoop</span>(<span class="pl-s">'@@@'</span>)
+    -&gt;<span class="pl-en">setUdder</span>(<span class="pl-s">'W'</span>);
+<span class="pl-k">echo</span> <span class="pl-s1"><span class="pl-c1">$</span>bessie</span>;</pre>
+<p>Displays:</p>
+<pre class="notranslate"><code>  ------------
+&lt; Hello, Farm! &gt;
+  ------------
+          \   ^__^
+           \  (oO)\_______
+              (__)\       )\/\
+               U  ||----W |
+                  ||     || @@@
+</code></pre>
+<h2><a id="user-content-adding-new-carcases" class="anchor" href="#user-content-adding-new-carcases" rel="nofollow noindex noopener external ugc"></a>Adding new Carcases</h2>
+<p>CowSay is easily extended to add new carcases for your custom needs. See the <a href="https://github.com/Gipetto/CowSay/blob/HEAD/docs/Carcasses.md" rel="nofollow noindex noopener external ugc">Carcasses</a> tutorial for more
+information.</p>
+<h2><a id="user-content-license" class="anchor" href="#user-content-license" rel="nofollow noindex noopener external ugc"></a>License</h2>
+<p>CowSay is licensed under <a href="https://github.com/Gipetto/CowSay/blob/HEAD/LICENSE.txt" rel="nofollow noindex noopener external ugc">The MIT License (MIT)</a>.</p>
+
+                </div>
+                    </div>
+    </div>
+            </section>
+        </section>
+    </section>
+
+        <footer class="wrapper-footer">
+            <nav class="container">
+                <div class="row">
+                    <ul class="social col-xs-7 col-sm-4 col-md-2 pull-right">
+                        <li><a href="http://github.com/composer/packagist" title="GitHub"><span class="icon-github"></span></a></li>
+                        <li><a href="https://twitter.com/packagist" title="Follow @packagist"><span class="icon-twitter"></span></a></li>
+                        <li><a href="mailto:contact@packagist.org" title="Contact"><span class="icon-mail"></span></a></li>
+                    </ul>
+
+                    <ul class="col-xs-4 col-md-2">
+                        <li><a href="/about">About Packagist</a></li>
+                        <li><a href="/feeds/" rel="nofollow">Atom/RSS Feeds</a></li>
+                    </ul>
+
+                    <div class="clearfix visible-xs-block"></div>
+
+                    <ul class="col-xs-3 col-md-2">
+                        <li><a href="/statistics" rel="nofollow">Statistics</a></li>
+                        <li><a href="/explore/">Browse Packages</a></li>
+                    </ul>
+
+                    <div class="clearfix visible-xs-block"></div>
+
+                    <ul class="col-xs-3 col-md-2">
+                        <li><a href="/apidoc">API</a></li>
+                        <li><a href="/mirrors">Mirrors</a></li>
+                    </ul>
+
+                    <div class="clearfix visible-xs-block"></div>
+
+                    <ul class="col-xs-3 col-md-2">
+                        <li><a href="https://status.packagist.org/">Status</a></li>
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <p class="toran col-xs-12">Packagist maintenance and hosting is provided by <a href="https://packagist.com/">Private Packagist</a></p>
+                </div>
+            </nav>
+        </footer>
+
+        <script nonce="GzxbcKfX+Tm37af9oPu96w==">
+            var algoliaConfig = {"app_id":"M58222SH95","search_key":"5ae4d03c98685bd7364c2e0fd819af05","index_name":"packagist"};
+                        window.process = {
+                env: { DEBUG: undefined },
+            };
+        </script>
+        
+        <script nonce="GzxbcKfX+Tm37af9oPu96w==" src="/build/app.js?v=1679429467"></script>
+
+            </body>
+</html>
